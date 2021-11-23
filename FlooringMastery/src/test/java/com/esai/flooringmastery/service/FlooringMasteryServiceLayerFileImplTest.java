@@ -82,13 +82,13 @@ public class FlooringMasteryServiceLayerFileImplTest {
         //get current date and set ordernum to 1
         // add to array of objects
         Object[] dateAndOrderNum = new Object[2];
-        LocalDate currentDate = LocalDate.now();
-        int orderNum = 4;
+        LocalDate currentDate = LocalDate.parse("2013-09-01");
+        int orderNum = 1;
         dateAndOrderNum[0] = currentDate;
         dateAndOrderNum[1] = orderNum;
-        
+
         Order retrievedOrder = testService.getOrder(dateAndOrderNum);
-        
+
         // Assert
         assertNotNull(retrievedOrder, "Order retrieved should not be null");
     }
